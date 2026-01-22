@@ -261,37 +261,7 @@
 </div>
 
 <script>
-    // Configuration
-    const BASE_ID = 'appFyqo4MASyUPmJh';
-    const LION_TABLE = 'tblyZzCVkhrxGeh4B';
-    const NEWS_TABLE = 'tbl4PkXDbw1H9Zrao';
-    const LEADS_TABLE = 'tblBEWJaRGKnrGR2B';
-    const LION_ID_VALUE = 7777;
-    
-    let API_TOKEN = null;
-    let currentLead = null;
-    let currentRecordId = null;
-
-    // Utility: Make Airtable API call
-    async function airtableAPI(endpoint, method = 'GET', body = null, useToken = null) {
-        const token = useToken || API_TOKEN;
-        const options = {
-            method,
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'Content-Type': 'application/json'
-            }
-        };
-        
-        if (body) {
-            options.body = JSON.stringify(body);
-        }
-        
-        const response = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${endpoint}`, options);
-        
-        if (!response.ok) {
-            throw new Error(`API Error: ${response.status}`);
-        }
+    // edits go here
         
         return await response.json();
     }
